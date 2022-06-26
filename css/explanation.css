@@ -1,0 +1,178 @@
+@media screen and(max-width: 480px) {
+  img {
+    border: 0;
+  }
+}
+
+@media screen and(min-width: 1280px) {
+  img {
+    border: 1px solid red;
+  }
+}
+
+@font-face {
+
+  font-family: 'MyFont';
+
+  src: url(../Dog/css/fonts/riipopkr/RiiPopkkR.otf);
+
+}
+
+/*背景*/
+body {
+  background-image: url("../img/Back-ground-image.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/*どうぶつの見え方*/
+.kuuhaku1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  display: table-cell;
+  text-align: center;
+  font-family: 'MyFont';
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*犬猫猿ちょうボタン*/
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+
+}
+
+/*説明部分*/
+.box {
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  padding: 150px 50px;
+  margin: 2em 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.kuuhaku {
+  margin-left: 10px;
+}
+
+button {
+  width: 180px;
+  height: 50px;
+  background-color: #01AC64;
+  font-size: 20px;
+  color: white;
+  border: 0;
+  white-space: nowrap;
+  border-radius: 7px;
+}
+
+.sample {
+  text-align: right;
+}
+
+.content1 {
+  margin-top: 100px;
+}
+
+.camera {
+  position: absolute;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  top: 100px;
+}
+
+.main1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0px;
+  padding-left: 50px;
+}
+
+button1 {
+  width: 180px;
+  height: 50px;
+  background-color: #01AC64;
+  font-size: 20px;
+  color: white;
+  border: 0;
+  white-space: nowrap;
+  border-radius: 7px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.main2 {
+  display: flex;
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  bottom: 50px;
+}
+
+.main3 {
+  text-align: center;
+  font-family: 'Zilla Slab Highlight';
+}
+
+.main4 {
+  display: flex;
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  left: 270px;
+  bottom: 50px;
+}
+
+.camera1 {
+  position: absolute;
+  bottom: 5.5%;
+}
+
+.camera2 {
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.camera3 {
+  position: absolute;
+  bottom: 148px;
+}
+
+.pcview {}
+
+.spview {
+  display: none;
+}
+
+@media screen and (max-width: 979px) {
+  .pcview {
+    display: none;
+  }
+
+  /* 余白を表示しない */
+  .spview {
+    display: block;
+  }
+}
