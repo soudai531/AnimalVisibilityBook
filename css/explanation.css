@@ -215,13 +215,15 @@ button1 {
 
 .bb-custom-wrapper nav a {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 200px;
+  height: 50px;
+  display: flex;
   text-align: center;
+  align-items: center;
   border-radius: 2px;
   background: #72b890;
   color: #fff;
-  font-size: 0;
+  font-size: 25px;
   margin: 2px;
 }
 
@@ -230,27 +232,14 @@ button1 {
 }
 
 .bb-custom-icon:before {
-  font-family: 'arrows';
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
   font-size: 20px;
   line-height: 30px;
   display: block;
   -webkit-font-smoothing: antialiased;
-}
-
-.bb-custom-icon-arrow-left:before,
-.bb-custom-icon-arrow-right:before {
-  content: "\e003";
-}
-
-.bb-custom-icon-arrow-left:before,
-.bb-custom-icon-first:before {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 /* No JS */
