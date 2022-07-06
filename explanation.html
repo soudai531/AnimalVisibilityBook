@@ -1,21 +1,12 @@
-<html lang="ja" class="no-js explanation">
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!-- めくり機能追記 -->
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
-    <meta name="description" content="Bookblock: A Content Flip Plugin - Demo 1" />
-    <meta name="keywords" content="javascript, jquery, plugin, css3, flip, page, 3d, booklet, book, perspective" />
-    <meta name="author" content="Codrops" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/bookblock.css">
-    <script src="js/modernizr.custom.js"></script>
-    <!-- めくり機能追記ここまで -->
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/explanation.css">
+    <title>犬</title>
     <div class="kuuhaku1"></div>
-    <h2 id="title">どうぶつの見え方<br>図鑑</h2>
-</head>
+    <h2>どうぶつの見え方<br>図鑑</h2>
 
 <body>
     <div class="content">
@@ -37,26 +28,12 @@
             </button>
         </div>
     </div>
-    <div class="main clearfix">
-        <div class="bb-custom-wrapper">
-            <div id="bb-bookblock" class="bb-bookblock">
-                <div class="bb-item">
-                    <img class="dog-img" src="img/explanation/1.png" alt="image01" /></a>
-                </div>
-                <div class="bb-item">
-                    <img class="dog-img" src="img/explanation/2.png" alt="image02" /></a>
-                </div>
-                <div class="bb-item">
-                    <img class="dog-img" src="img/explanation/3.png" alt="image03" /></a>
-                </div>
-                <nav>
-                    <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-                    <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-                </nav>
-            </div>
-        </div>
+    <div class="box" width="1000" height="600">
+        <u>
+            <h1>イヌ</h1>
+        </u>
+        <p>説明文テキスト</p>
     </div>
-    <!-- /container -->
     <div class="main1 pcview">
         <button type=" button" style="background-color: #01ACA6">
             <div class="camera1"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
@@ -75,85 +52,7 @@
     <div class="main4 spview">
         <button type="button" style="width: 50; background-color: #01ACA6">➡️</button>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/jquerypp.custom.js"></script>
-    <script src="js/jquery.bookblock.js"></script>
-    <script>
-        // const button = document.getElementById("bb-nav-prev");
-        // button.document.getElementById('title').style.color = "red";
-
-
-
-        var Page = (function () {
-
-            var config = {
-                $bookBlock: $('#bb-bookblock'),
-                $navNext: $('#bb-nav-next'),
-                $navPrev: $('#bb-nav-prev'),
-            },
-                init = function () {
-                    config.$bookBlock.bookblock({
-                        speed: 1200,
-                        shadowSides: 0.8,
-                        shadowFlip: 0.7
-                    });
-                    initEvents();
-                },
-                initEvents = function () {
-
-                    var $slides = config.$bookBlock.children();
-
-                    // add navigation events
-                    config.$navNext.on('click touchstart', function () {
-                        config.$bookBlock.bookblock('next');
-                        return false;
-                    });
-
-                    config.$navPrev.on('click touchstart', function () {
-                        config.$bookBlock.bookblock('prev');
-                        return false;
-                    });
-
-                    // add swipe events
-                    $slides.on({
-                        'swipeleft': function (event) {
-                            config.$bookBlock.bookblock('next');
-                            return false;
-                        },
-                        'swiperight': function (event) {
-                            config.$bookBlock.bookblock('prev');
-                            return false;
-                        }
-                    });
-
-                    // add keyboard events
-                    $(document).keydown(function (e) {
-                        var keyCode = e.keyCode || e.which,
-                            arrow = {
-                                left: 37,
-                                up: 38,
-                                right: 39,
-                                down: 40
-                            };
-
-                        switch (keyCode) {
-                            case arrow.left:
-                                config.$bookBlock.bookblock('prev');
-                                break;
-                            case arrow.right:
-                                config.$bookBlock.bookblock('next');
-                                break;
-                        }
-                    });
-                };
-
-            return { init: init };
-
-        })();
-    </script>
-    <script>
-        Page.init();
-    </script>
 </body>
+</head>
 
 </html>

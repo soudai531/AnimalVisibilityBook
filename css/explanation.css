@@ -60,6 +60,16 @@ h2 {
 
 }
 
+/*説明部分*/
+.box {
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  padding: 150px 50px;
+  margin: 2em 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .kuuhaku {
   margin-left: 10px;
 }
