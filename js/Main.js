@@ -36,15 +36,14 @@ export class Main {
       el: "#myapp",
       data: {
         shaderTypes: [
-          // { name: "モノクロ", id: "monochrome", value: false },
-          // { name: "ネガポジ反転", id: "nega", value: false },
+
           { name: "ヒト", id: "human", value: false },
           { name: "サル", id: "monkey", value: false },
           { name: "イヌ", id: "dog", value: false }
         ],
         targetTypes: [
-          { name: "画像", value: "image" },
-          { name: "ビデオ", value: "video" }
+          // { name: "画像", value: "image" },
+          // { name: "ビデオ", value: "video" }
         ],
         picked: "video"
       },
@@ -53,20 +52,20 @@ export class Main {
         onChangeShaderCheckbox: item => {
           item.value = !item.value;
           this.changeShader(item.id, item.value);
-        },
-        onChangeTargetRadio: item => {
-          console.log(item.value);
-          this.picked = item.value;
-          this.changeScene(item.value);
+          // },
+          // onChangeTargetRadio: item => {
+          //   console.log(item.value);
+          //   this.picked = item.value;
+          //   this.changeScene(item.value);
         }
       }
     });
   }
 
   //vueのメソッドリスナーを呼び出し
-  changeScene(type) {
-    this.objects.change(type);
-  }
+  // changeScene(type) {
+  //   this.objects.change(type);
+  // }
 
   // initMouse() {
   //   if ("ontouchstart" in window) {

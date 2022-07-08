@@ -5,13 +5,16 @@
 export class TestObjects {
   constructor(scene, renderer) {
     this.renderer = renderer;
-    this.meshImage = this.createImagePlane();
+    // this.meshImage = this.createImagePlane();
     this.meshVideo = this.createVideoPlane();
 
     scene.add(this.meshImage);
     scene.add(this.meshVideo);
 
-    this.currentType = "image";
+    this.meshImage.visible = false;
+    this.meshVideo.visible = true;
+
+    this.currentType = "video";
   }
 
   change(type) {
@@ -69,7 +72,7 @@ export class TestObjects {
 
     const group = new THREE.Group();
     group.add(movieScreen);
-    group.visible = false;
+    group.visible = true;
     return group;
   }
 
@@ -88,7 +91,7 @@ export class TestObjects {
     });
     const mesh = new THREE.Mesh(geometry, material);
     group.add(mesh);
-    group.visible = true;
+    group.visible = false;
     return group;
   }
 
