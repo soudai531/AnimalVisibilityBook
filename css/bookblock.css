@@ -1,6 +1,7 @@
 .bb-bookblock {
-	width: 600px;
-	height: 400px;
+	/*めくり時の写真設定*/
+	width: 800px;
+	height: 500px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 100;
@@ -34,7 +35,7 @@
 	transform-origin: center top;
 }
 
-.bb-page > div,
+.bb-page>div,
 .bb-outer,
 .bb-content,
 .bb-inner {
@@ -55,7 +56,7 @@
 	height: 200%;
 }
 
-.bb-page > div {
+.bb-page>div {
 	width: 100%;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -77,7 +78,7 @@
 	z-index: 999;
 }
 
-.bb-overlay, 
+.bb-overlay,
 .bb-flipoverlay {
 	background-color: rgba(0, 0, 0, 0.7);
 	position: absolute;
@@ -92,14 +93,14 @@
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.bb-bookblock.bb-vertical > div.bb-page:first-child,
-.bb-bookblock.bb-vertical > div.bb-page:first-child .bb-back {
+.bb-bookblock.bb-vertical>div.bb-page:first-child,
+.bb-bookblock.bb-vertical>div.bb-page:first-child .bb-back {
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 
-.bb-bookblock.bb-horizontal > div.bb-page:first-child,
-.bb-bookblock.bb-horizontal > div.bb-page:first-child .bb-back {
+.bb-bookblock.bb-horizontal>div.bb-page:first-child,
+.bb-bookblock.bb-horizontal>div.bb-page:first-child .bb-back {
 	-webkit-transform: rotateX(180deg);
 	transform: rotateX(180deg);
 }
@@ -171,7 +172,7 @@
 }
 
 /* No JS */
-.no-js .bb-bookblock, 
+.no-js .bb-bookblock,
 .no-js ul.bb-custom-grid li {
 	width: auto;
 	height: auto;
