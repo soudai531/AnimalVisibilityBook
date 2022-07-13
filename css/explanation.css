@@ -51,7 +51,7 @@ h2 {
 }
 
 /*犬猫猿ちょうボタン*/
-.main {
+.top-main {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -151,8 +151,11 @@ button {
 }
 
 @media screen and (max-width: 979px) {
-  .pcview {
+
+  .pcview,
+  .page-text {
     display: none;
+
   }
 
   /* 余白を表示しない */
@@ -175,11 +178,8 @@ button {
 }
 
 .bb-custom-wrapper {
-  width: 800px;
-  height: 500px;
-  position: relative;
-  padding: 0;
-  margin: 0;
+  width: 900px;
+  height: 550px;
 }
 
 .bb-custom-wrapper .bb-bookblock {
@@ -253,6 +253,23 @@ button {
 
 /* 説明画像 */
 .explanation-img {
-  width: 800px;
-  height: 500px;
+  width: 900px;
+  height: 550px;
+  display: flex;
+}
+
+.enclosure {
+  margin: auto;
+  padding: 0;
+}
+
+@media screen and (max-width: 979px) {
+
+  .explanation-img,
+  .bb-bookblock,
+  .bb-item {
+    width: 400px;
+    height: 200px;
+  }
+
 }
