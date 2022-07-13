@@ -178,8 +178,8 @@ button {
   width: 800px;
   height: 500px;
   position: relative;
-  margin: 0 auto 40px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .bb-custom-wrapper .bb-bookblock {
@@ -204,7 +204,7 @@ button {
 
 .bb-custom-wrapper nav a {
   display: inline-block;
-  width: 250px;
+  width: fit-content;
   height: 50px;
   display: flex;
   text-align: center;
@@ -213,7 +213,6 @@ button {
   background: #72b890;
   color: #fff;
   font-size: 25px;
-  margin: 2px;
 }
 
 .bb-custom-wrapper nav a:hover {
@@ -233,12 +232,14 @@ button {
   position: fixed;
   bottom: 1em;
   right: 2em;
+  text-align: center;
 }
 
 .turn-left-button {
   position: fixed;
   bottom: 1em;
   left: 2em;
+  text-align: center;
 }
 
 /* No JS */
