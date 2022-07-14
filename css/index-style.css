@@ -254,3 +254,5 @@ background: url(Dog.png);
       clip-path: polygon(0 100%, 50% 0, 100% 100%);
       animation: stretch 3s linear infinite;
   }/*回り三角形*/
+
+  
