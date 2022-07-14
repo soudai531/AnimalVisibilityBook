@@ -41,10 +41,6 @@ export class Main {
           { name: "サル", id: "monkey", value: false },
           { name: "イヌ", id: "dog", value: false }
         ],
-        targetTypes: [
-          // { name: "画像", value: "image" },
-          // { name: "ビデオ", value: "video" }
-        ],
         picked: "video"
       },
       methods: {
@@ -52,11 +48,6 @@ export class Main {
         onChangeShaderCheckbox: item => {
           item.value = !item.value;
           this.changeShader(item.id, item.value);
-          // },
-          // onChangeTargetRadio: item => {
-          //   console.log(item.value);
-          //   this.picked = item.value;
-          //   this.changeScene(item.value);
         }
       }
     });

@@ -5,7 +5,7 @@
 export class TestObjects {
   constructor(scene, renderer) {
     this.renderer = renderer;
-    // this.meshImage = this.createImagePlane();
+    this.meshImage = this.createImagePlane();
     this.meshVideo = this.createVideoPlane();
 
     scene.add(this.meshImage);
@@ -39,17 +39,10 @@ export class TestObjects {
   createVideoPlane() {
     //video要素とそれをキャプチャするcanvas要素を生成
     this.video = document.getElementById("video");
-    // this.video.src = "texture/video.mp4";
-    // this.video.load();
-    // this.video.pause();
     this.video.volume = 0;
-    // this.video.loop = true;
-
     const canvas = document.createElement("canvas");
-    canvas.width = 1400;
-    canvas.height = 700;
-    // canvas.width = 227;
-    // canvas.height = 170;
+    canvas.width = 1600;
+    canvas.height = 900;
 
     this.videoCanvasContext = canvas.getContext("2d");
     this.videoCanvasContext.fillStyle = "#000000";

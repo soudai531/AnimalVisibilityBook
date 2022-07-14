@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Three.js Pixel Shader Samples - ICS</title>
-  <meta name="description" content="Three.jsでのピクセルシェーダーのサンプルです。" />
+  <title>animal-camera</title>
+  <meta name="description" content="動物の見え方をカメラを使って体験で来ます。" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google" content="notranslate" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
@@ -39,19 +39,24 @@
       </div>
     </div>
   </div>
-  <video id="video" width="0" height="0" autoplay playsinline></video>
-  <script>
-    const video = document.getElementById("video")
-    navigator.mediaDevices.getUserMedia({
-      video: true,
-      audio: false,
-    }).then(stream => {
-      video.srcObject = stream;
-      video.play()
-    }).catch(e => {
-      console.log(e)
-    })
-  </script>
+  <video id="video" width="1600" height="900" autoplay playsinline</video>
+    <script>
+      const video = document.getElementById("video")
+      var constraints = {
+        audio: false,
+        video: {
+          // スマホのバックカメラを使用
+          facingMode: 'environment'
+        }
+      };
+      navigator.mediaDevices.getUserMedia(constraints).
+        then(stream => {
+          video.srcObject = stream;
+          video.play()
+        }).catch(e => {
+          console.log(e)
+        })
+    </script>
 </body>
 
 </html>
