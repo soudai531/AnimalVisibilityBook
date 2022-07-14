@@ -82,6 +82,8 @@ button {
   border: 0;
   white-space: nowrap;
   border-radius: 7px;
+  text-align: right;
+  padding-right: 5%;
 }
 
 .sample {
@@ -96,7 +98,8 @@ button {
   position: absolute;
   margin-bottom: 20px;
   margin-left: 30px;
-  top: 100px;
+  top: 125px;
+  
 }
 
 .main1 {
@@ -127,13 +130,15 @@ button {
   display: flex;
   align-items: flex-end;
   position: relative;
-  left: 270px;
+  float: right;
+  left: 30px;
   bottom: 50px;
 }
 
 .camera1 {
   position: absolute;
-  bottom: 5.5%;
+  margin-bottom: 20px;
+  top: 671px;
 }
 
 .camera2 {
@@ -143,7 +148,11 @@ button {
 
 .camera3 {
   position: absolute;
-  bottom: 148px;
+  top: 671px;
+}
+.camera4{
+  font-size: 18px;
+  text-align: center;
 }
 
 .spview {
