@@ -83,6 +83,8 @@ button {
   border: 0;
   white-space: nowrap;
   border-radius: 7px;
+  text-align: right;
+  padding-right: 5%;
 }
 
 .sample {
@@ -97,7 +99,8 @@ button {
   position: absolute;
   margin-bottom: 20px;
   margin-left: 30px;
-  top: 100px;
+  top: 125px;
+  
 }
 
 .main1 {
@@ -107,20 +110,6 @@ button {
   font-size: 0px;
   padding-left: 50px;
 }
-
-button1 {
-  width: 180px;
-  height: 50px;
-  background-color: #01AC64;
-  font-size: 20px;
-  color: white;
-  border: 0;
-  white-space: nowrap;
-  border-radius: 7px;
-  text-align: center;
-  margin-top: 80px;
-}
-
 .main2 {
   display: flex;
   justify-content: flex-end;
@@ -141,13 +130,15 @@ button1 {
   display: flex;
   align-items: flex-end;
   position: relative;
-  left: 270px;
+  float: right;
+  left: 30px;
   bottom: 50px;
 }
 
 .camera1 {
   position: absolute;
-  bottom: 5.5%;
+  margin-bottom: 20px;
+  top: 671px;
 }
 
 .camera2 {
@@ -157,7 +148,11 @@ button1 {
 
 .camera3 {
   position: absolute;
-  bottom: 148px;
+  top: 671px;
+}
+.camera4{
+  font-size: 18px;
+  text-align: center;
 }
 
 .pcview {}
