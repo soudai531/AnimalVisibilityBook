@@ -19,44 +19,22 @@
 </head>
 
 <body>
-
-  <div id="canvas-wrapper"></div>
   <div id="myapp">
     <div id="shader_select_menu">
       <div v-for="item in shaderTypes">
+        <button v-on:click="onChangeShaderCheckbox(item)">{{item.name}}</button>
         <label>
           <input type="checkbox" v-bind:selected="item.value === true" v-on:change="onChangeShaderCheckbox(item)">
           {{item.name}}
         </label>
       </div>
-
-      <div id="object_change">
-        <label v-for="item in targetTypes">
-          <input type="radio" v-on:click="onChangeTargetRadio(item)" name="targetTypes"
-            v-bind:checked="item.value === picked">
-          {{item.name}}
-        </label>
-      </div>
     </div>
   </div>
-  <video id="video" width="1600" height="900" autoplay playsinline</video>
-    <script>
-      const video = document.getElementById("video")
-      var constraints = {
-        audio: false,
-        video: {
-          // スマホのバックカメラを使用
-          facingMode: 'environment'
-        }
-      };
-      navigator.mediaDevices.getUserMedia(constraints).
-        then(stream => {
-          video.srcObject = stream;
-          video.play()
-        }).catch(e => {
-          console.log(e)
-        })
-    </script>
+  <div id="canvas-wrapper"></div>
+  <div id="video-wrapper">
+    <video id="video" width="100" height="100" autoplay playsinline></video>
+  </div>
+
 </body>
 
 </html>

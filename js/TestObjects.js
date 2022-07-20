@@ -38,6 +38,23 @@ export class TestObjects {
 
   createVideoPlane() {
     //video要素とそれをキャプチャするcanvas要素を生成
+
+    const video = document.getElementById("video")
+    var constraints = {
+      audio: false,
+      video: {
+        // スマホのバックカメラを使用
+        facingMode: 'environment'
+      }
+    };
+    navigator.mediaDevices.getUserMedia(constraints).
+      then(stream => {
+        video.srcObject = stream;
+        video.play()
+      }).catch(e => {
+        console.log(e)
+      })
+
     this.video = document.getElementById("video");
     this.video.volume = 0;
     const canvas = document.createElement("canvas");

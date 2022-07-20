@@ -1,14 +1,7 @@
-// import { BayerDitherShader } from "./shader/BayerDitherShader.js";
-// import { DiffusionShader } from "./shader/DiffusionShader.js";
 import { MonkeyShader } from "./shader/MonkeyShader.js";
 import { DogShader } from "./shader/DogShader.js";
 import { MonochromeShader } from "./shader/MonochromeShader.js";
-// import { MosaicShader } from "./shader/MosaicShader.js";
 import { NegativePositiveShader } from "./shader/NegativePositiveShader.js";
-// import { RandomDitherShader } from "./shader/RandomDitherShader.js";
-// import { SepiaToneShader } from "./shader/SepiaToneShader.js";
-// import { ThresholdShader } from "./shader/ThresholdShader.js";
-// import { UzumakiShader } from "./shader/UzumakiShader.js";
 import { TestObjects } from "./TestObjects.js";
 
 //  HTML読み込みと解析が完了したとき
@@ -27,8 +20,11 @@ export class Main {
   initialize() {
     this.initVue();
     this.init3d();
-    // this.initMouse();
   }
+
+
+
+
 
   initVue() {
     // v-repeat
@@ -36,7 +32,6 @@ export class Main {
       el: "#myapp",
       data: {
         shaderTypes: [
-
           { name: "ヒト", id: "human", value: false },
           { name: "サル", id: "monkey", value: false },
           { name: "イヌ", id: "dog", value: false }
@@ -53,24 +48,6 @@ export class Main {
     });
   }
 
-  //vueのメソッドリスナーを呼び出し
-  // changeScene(type) {
-  //   this.objects.change(type);
-  // }
-
-  // initMouse() {
-  //   if ("ontouchstart" in window) {
-  //     this.renderer.domElement.addEventListener("touchmove", event => {
-  //       event.preventDefault();
-  //       this.mouseX = event.changedTouches[0].pageX;
-  //       this.mouseY = event.changedTouches[0].pageY;
-  //     });
-  //   }
-  //   document.addEventListener("mousemove", event => {
-  //     this.mouseX = event.pageX;
-  //     this.mouseY = event.pageY;
-  //   });
-  // }
 
   initObjects() {
     this.objects = new TestObjects(this.scene, this.renderer, this.spMode);
@@ -148,8 +125,6 @@ export class Main {
     } else {
       this.composer.render();
     }
-    //  マウス位置を更新
-    // this.uzumaki.setMousePos(this.mouseX, this.mouseY);
     this.objects.onUpdate();
   }
 
@@ -160,18 +135,6 @@ export class Main {
     this.addEffect("nega", new NegativePositiveShader());
     this.addEffect("monkey", new MonkeyShader());
     this.addEffect("dog", new DogShader());
-    // this.addEffect("sepia_tone", new SepiaToneShader());
-    // this.addEffect("mosaic", new MosaicShader(width, height));
-    // this.addEffect("diffusion", new DiffusionShader(width, height));
-
-    // this.uzumaki = new UzumakiShader(width, height);
-
-    // this.addEffect("uzumaki", this.uzumaki);
-    // this.uzumaki.uniforms = this.effects["uzumaki"].pass.uniforms;
-
-    // this.addEffect("threshold", new ThresholdShader());
-    // this.addEffect("random_dither", new RandomDitherShader());
-    // this.addEffect("bayer_dither", new BayerDitherShader(width, height));
   }
 
   addEffect(name, shader) {
