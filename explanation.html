@@ -20,15 +20,16 @@
         <div class="content">
             <div class="top-main">
                 <button type="button">
-                    <div class="camera pcview"><img src="./img/dog_icon.png" width="35px" height="35px"></div>イヌ
+                    <div class="camera-dog pcview"><img src="./img/dog_icon.png" width="35px" height="35px"></div>イヌ
                 </button>
                 <div class="kuuhaku spview"></div>
                 <button type="button">
-                    <div class="camera pcview"><img src="./img/cat_icon.png" width="35px" height="35px"></div>ネコ
+                    <div class="camera-cat pcview"><img src="./img/cat_icon.png" width="35px" height="35px"></div>ネコ
                 </button>
                 <div class="kuuhaku spview"></div>
                 <button type="button">
-                    <div class="camera pcview"><img src="./img/monkey_icon.png" width="40px" height="40px"></div>サル
+                    <div class="camera-monky pcview"><img src="./img/monkey_icon.png" width="40px" height="40px"></div>
+                    サル
                 </button>
             </div>
         </div>
@@ -50,6 +51,18 @@
                         <a id="bb-nav-prev" href="#" class="bb-custom-icon turn-left-button"><img
                                 src="img/left-arrow.png">
                             <span class="page-text">まえのページへ</span></a>
+                        <div class="main1 pcview">
+                            <button type=" button" style="background-color: #01ACA6">
+                                <div class="camera1"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
+                                <div class="camera2">スマホでみてみる</div>
+                            </button>
+                        </div>
+                        <div class="main3 spview">
+                            <button type="button" style="width:180; background-color: #01ACA6">
+                                <div class="camera3"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
+                                <span class="camera4">カメラで見てみる</span>
+                            </button>
+                        </div>
                         <a id="bb-nav-next" href="#" class="bb-custom-icon turn-right-button"><span
                                 class="page-text">つぎのページへ</span>
                             <img src="img/right-arrow.png"></a>
@@ -57,92 +70,79 @@
                 </div>
             </div>
         </div><!-- /container -->
-        <div class="main1 pcview">
-            <button type=" button" style="background-color: #01ACA6">
-                <div class="camera1"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
-                <div class="camera2">スマホでみてみる</div>
-            </button>
-        </div>
-        <div class="main3 spview">
-            <button type="button" style="width:180; background-color: #01ACA6">
-                <div class="camera3"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
-                <div class="camera2">カメラで見てみる</div>
-            </button>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/jquerypp.custom.js"></script>
-    <script src="js/jquery.bookblock.js"></script>
-    <script>
-        var Page = (function () {
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquerypp.custom.js"></script>
+        <script src="js/jquery.bookblock.js"></script>
+        <script>
+            var Page = (function () {
 
-            var config = {
-                $bookBlock: $('#bb-bookblock'),
-                $navNext: $('#bb-nav-next'),
-                $navPrev: $('#bb-nav-prev'),
-            },
-                init = function () {
-                    config.$bookBlock.bookblock({
-                        speed: 1200,
-                        shadowSides: 0.8,
-                        shadowFlip: 0.7
-                    });
-                    initEvents();
+                var config = {
+                    $bookBlock: $('#bb-bookblock'),
+                    $navNext: $('#bb-nav-next'),
+                    $navPrev: $('#bb-nav-prev'),
                 },
-                initEvents = function () {
+                    init = function () {
+                        config.$bookBlock.bookblock({
+                            speed: 1200,
+                            shadowSides: 0.8,
+                            shadowFlip: 0.7
+                        });
+                        initEvents();
+                    },
+                    initEvents = function () {
 
-                    var $slides = config.$bookBlock.children();
+                        var $slides = config.$bookBlock.children();
 
-                    // add navigation events
-                    config.$navNext.on('click touchstart', function () {
-                        config.$bookBlock.bookblock('next');
-                        return false;
-                    });
-
-                    config.$navPrev.on('click touchstart', function () {
-                        config.$bookBlock.bookblock('prev');
-                        return false;
-                    });
-
-                    // add swipe events
-                    $slides.on({
-                        'swipeleft': function (event) {
+                        // add navigation events
+                        config.$navNext.on('click touchstart', function () {
                             config.$bookBlock.bookblock('next');
                             return false;
-                        },
-                        'swiperight': function (event) {
+                        });
+
+                        config.$navPrev.on('click touchstart', function () {
                             config.$bookBlock.bookblock('prev');
                             return false;
-                        }
-                    });
+                        });
 
-                    // add keyboard events
-                    $(document).keydown(function (e) {
-                        var keyCode = e.keyCode || e.which,
-                            arrow = {
-                                left: 37,
-                                up: 38,
-                                right: 39,
-                                down: 40
-                            };
-
-                        switch (keyCode) {
-                            case arrow.left:
-                                config.$bookBlock.bookblock('prev');
-                                break;
-                            case arrow.right:
+                        // add swipe events
+                        $slides.on({
+                            'swipeleft': function (event) {
                                 config.$bookBlock.bookblock('next');
-                                break;
-                        }
-                    });
-                };
+                                return false;
+                            },
+                            'swiperight': function (event) {
+                                config.$bookBlock.bookblock('prev');
+                                return false;
+                            }
+                        });
 
-            return { init: init };
+                        // add keyboard events
+                        $(document).keydown(function (e) {
+                            var keyCode = e.keyCode || e.which,
+                                arrow = {
+                                    left: 37,
+                                    up: 38,
+                                    right: 39,
+                                    down: 40
+                                };
 
-        })();
-    </script>
-    <script>
-        Page.init();
-    </script>
+                            switch (keyCode) {
+                                case arrow.left:
+                                    config.$bookBlock.bookblock('prev');
+                                    break;
+                                case arrow.right:
+                                    config.$bookBlock.bookblock('next');
+                                    break;
+                            }
+                        });
+                    };
+
+                return { init: init };
+
+            })();
+        </script>
+        <script>
+            Page.init();
+        </script>
 </body>
 </head>
