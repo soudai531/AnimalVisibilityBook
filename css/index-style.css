@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
 }
 
 @font-face {
@@ -51,10 +52,9 @@ p {
     width: 181.89px;
     height: 211.47px;
     left: 124.42px;
-    top: 727px;
-
-    background: url(Monkey.png);
+    top: 90%;
     transform: rotate(22.06deg);
+    background: url(Monkey.png);
 }
 
 /* .butterflyimg {
@@ -62,8 +62,7 @@ p {
     width: 127.31px;
     height: 98.96px;
     left: 733px;
-    top: 687.07px;
-
+    top: 90%;
     background: url(Butterfly.png);
     transform: rotate(-45.03deg);
 } */
@@ -73,8 +72,7 @@ p {
     width: 235px;
     height: 229px;
     left: 323px;
-    top: 702px;
-
+    top: 90%;
     background: url(Cat.png);
 }
 
@@ -83,187 +81,12 @@ p {
     width: 203px;
     height: 223px;
     left: 976px;
-    top: 682px;
-
+    top: 90%;
     background: url(Dog.png);
 }
 
-.wrapper {
-<<<<<<< Updated upstream
-      position: relative;
-      margin-left: -250px;
-	  margin-top: -250px;
-      width: 500px;
-      height: 500px;
-      border-radius: 250px;
-      background-color: orange;
-  }
-  .circle-frame1 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(0deg);
-      animation: rotate1 20s linear infinite;
-  }
-  @keyframes rotate1 {
-      0% {
-          transform: rotate(0deg);
-      }
-      100% {
-          transform: rotate(360deg);
-      }
-  }
-  .circle-frame2 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(45deg);
-      animation: rotate2 20s linear infinite;
-  }
-  @keyframes rotate2 {
-      0% {
-          transform: rotate(45deg);
-      }
-      100% {
-          transform: rotate(405deg);
-      }
-  }
-  .circle-frame3 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(90deg);
-      animation: rotate3 20s linear infinite;
-  }
-  @keyframes rotate3 {
-      0% {
-          transform: rotate(90deg);
-      }
-      100% {
-          transform: rotate(450deg);
-      }
-  }
-  .circle-frame4 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(135deg);
-      animation: rotate4 20s linear infinite;
-  }
-  @keyframes rotate4 {
-      0% {
-          transform: rotate(135deg);
-      }
-      100% {
-          transform: rotate(495deg);
-      }
-  }
-  .circle-frame5 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(180deg);
-      animation: rotate5 20s linear infinite;
-  }
-  @keyframes rotate5 {
-      0% {
-          transform: rotate(180deg);
-      }
-      100% {
-          transform: rotate(540deg);
-      }
-  }
-  .circle-frame6 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(225deg);
-      animation: rotate6 20s linear infinite;
-  }
-  @keyframes rotate6 {
-      0% {
-          transform: rotate(225deg);
-      }
-      100% {
-          transform: rotate(585deg);
-      }
-  }
-  .circle-frame7 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(270deg);
-      animation: rotate7 20s linear infinite;
-  }
-  @keyframes rotate7 {
-      0% {
-          transform: rotate(270deg);
-      }
-      100% {
-          transform: rotate(630deg);
-      }
-  }
-  .circle-frame8 {
-      position: absolute;
-      top: -5px;
-      left: calc(50% - 10px);
-      width: 20px;
-      height: calc(50% + 5px);
-      transform-origin: center bottom;
-      transform: rotate(315deg);
-      animation: rotate8 20s linear infinite;
-  }
-  @keyframes rotate8 {
-      0% {
-          transform: rotate(315deg);
-      }
-      100% {
-          transform: rotate(675deg);
-      }
-  }
-  @keyframes stretch{ 
-      0% {
-          clip-path: polygon(0 90%, 50% 50%, 100% 90%);
-      }
-      50% {
-          clip-path: polygon(0 100%, 50% 0, 100% 100%);
-      }
-      100% {
-          clip-path: polygon(0 90%, 50% 50%, 100% 90%);
-      }
-  }/*拡大縮小 */
-  .triangle {
-      margin-top: -60px;
-      width: 60px;
-      height: 60px;
-      background-color: #FF6600;
-      clip-path: polygon(0 100%, 50% 0, 100% 100%);
-      animation: stretch 3s linear infinite;
-  }/*回り三角形*/
 
-  
-=======
+.wrapper {
     position: relative;
     margin-left: -250px;
     margin-top: -250px;
@@ -464,6 +287,3 @@ p {
     clip-path: polygon(0 100%, 50% 0, 100% 100%);
     animation: stretch 3s linear infinite;
 }
-
-/*回り三角形*/
->>>>>>> Stashed changes
