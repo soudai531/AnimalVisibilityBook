@@ -149,18 +149,14 @@ button {
 
 .camera1 {
   position: absolute;
-  margin-bottom: 20px;
-  top: 671px;
 }
 
 .camera2 {
   font-size: 15px;
-  margin-left: 30px;
 }
 
 .camera3 {
   position: absolute;
-  top: 671px;
 }
 
 .camera4 {
