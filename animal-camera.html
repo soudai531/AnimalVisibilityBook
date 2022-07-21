@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>animal-camera</title>
+  <meta name="description" content="動物の見え方をカメラを使って体験で来ます。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
+  <script defer src="libs/shaders/CopyShader.js"></script>
+  <script defer src="libs/postprocessing/MaskPass.js"></script>
+  <script defer src="libs/postprocessing/RenderPass.js"></script>
+  <script defer src="libs/postprocessing/EffectComposer.js"></script>
+  <script defer src="libs/postprocessing/ShaderPass.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script defer src="js/Main.js" type="module"></script>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div id="myapp">
+    <div id="shader_select_menu">
+      <div v-for="item in shaderTypes">
+        <button v-on:click="onChangeShaderCheckbox(item)">{{item.name}}</button>
+        <label>
+          <input type="checkbox" v-bind:selected="item.value === true" v-on:change="onChangeShaderCheckbox(item)">
+          {{item.name}}
+        </label>
+      </div>
+    </div>
+  </div>
+  <div id="canvas-wrapper"></div>
+  <div id="video-wrapper">
+    <video id="video" width="100" height="100" autoplay playsinline></video>
+  </div>
+
+</body>
+
+</html>
