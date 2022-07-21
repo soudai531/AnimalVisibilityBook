@@ -34,7 +34,8 @@ export class Main {
         shaderTypes: [
           { name: "ヒト", id: "human", value: false },
           { name: "サル", id: "monkey", value: false },
-          { name: "イヌ", id: "dog", value: false }
+          { name: "イヌ", id: "dog", value: false },
+          { name: "ネコ", id: "cat", value: false }
         ],
         picked: "video"
       },
@@ -42,7 +43,12 @@ export class Main {
         //チェックボックスリスナー
         onChangeShaderCheckbox: item => {
           item.value = !item.value;
-          this.changeShader(item.id, item.value);
+          if (item.name == "イヌ" || item.name == "ネコ") {
+            alert("現在開発中です。");
+          }
+          if (item.id == "monkey") {
+            this.changeShader(item.id, item.value);
+          }
         }
       }
     });
