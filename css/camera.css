@@ -6,10 +6,7 @@ body {
   flex-flow: column;
 }
 
-canvas {
-  width: 500px;
-  height: 500px;
-}
+canvas {}
 
 #canvas-wrapper {
   /* margin-top: 150px; */

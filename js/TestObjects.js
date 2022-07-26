@@ -17,25 +17,6 @@ export class TestObjects {
     this.currentType = "video";
   }
 
-  change(type) {
-    this.currentType = type;
-
-    switch (type) {
-      case "video":
-        this.video.play();
-        this.meshImage.visible = false;
-        this.meshVideo.visible = true;
-        break;
-      case "image":
-        this.video.pause();
-        this.meshImage.visible = true;
-        this.meshVideo.visible = false;
-        break;
-      default:
-        throw new Error();
-    }
-  }
-
   createVideoPlane() {
     //video要素とそれをキャプチャするcanvas要素を生成
     const video = document.getElementById("video")
@@ -58,8 +39,8 @@ export class TestObjects {
     this.video = document.getElementById("video");
     this.video.volume = 0;
     const canvas = document.createElement("canvas");
-    canvas.width = 1280;
-    canvas.height = 720;
+    canvas.width = 480;
+    canvas.height = 640;
 
     this.videoCanvasContext = canvas.getContext("2d");
     this.videoCanvasContext.fillStyle = "#000000";

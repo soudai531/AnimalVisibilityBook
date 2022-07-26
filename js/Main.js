@@ -91,14 +91,14 @@ export class Main {
     //カメラの作成(画角、アスペクト比、カメラからの距離、カメラから奥までの距離)
     this.camera = new THREE.PerspectiveCamera(
       77,
-      1208 / 720,
+      3 / 4,
       0.1,
       100
     );
     //レンダラーを作成
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     // セットするサイズを指定
-    this.renderer.setSize(1280, 720);
+    this.renderer.setSize(480, 640);
     // 
     this.renderer.setPixelRatio(window.devicePixelRatio);
     // DOMオブジェクトを取得
