@@ -22,10 +22,6 @@ export class Main {
     this.init3d();
   }
 
-
-
-
-
   initVue() {
     // v-repeat
     new Vue({
@@ -43,7 +39,7 @@ export class Main {
         //チェックボックスリスナー
         onChangeShaderCheckbox: item => {
           item.value = !item.value;
-          if (item.name == "イヌ" || item.name == "ネコ") {
+          if (item.id == "dog" || item.id == "cat") {
             alert("現在開発中です。");
           }
           if (item.id == "monkey") {
@@ -90,20 +86,19 @@ export class Main {
 
   //  Three.jsの初期化処理
   init3d() {
-
     //シーンの作成
     this.scene = new THREE.Scene();
     //カメラの作成(画角、アスペクト比、カメラからの距離、カメラから奥までの距離)
     this.camera = new THREE.PerspectiveCamera(
       77,
-      window.innerWidth / window.innerHeight,
+      1208 / 720,
       0.1,
-      1000
+      100
     );
     //レンダラーを作成
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    // セットするサイズを指定(今回は前面)
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    // セットするサイズを指定
+    this.renderer.setSize(1280, 720);
     // 
     this.renderer.setPixelRatio(window.devicePixelRatio);
     // DOMオブジェクトを取得

@@ -38,8 +38,8 @@ export class TestObjects {
 
   createVideoPlane() {
     //video要素とそれをキャプチャするcanvas要素を生成
-
     const video = document.getElementById("video")
+    // カメラから映像を取得
     var constraints = {
       audio: false,
       video: {
@@ -58,8 +58,8 @@ export class TestObjects {
     this.video = document.getElementById("video");
     this.video.volume = 0;
     const canvas = document.createElement("canvas");
-    canvas.width = 1600;
-    canvas.height = 900;
+    canvas.width = 1280;
+    canvas.height = 720;
 
     this.videoCanvasContext = canvas.getContext("2d");
     this.videoCanvasContext.fillStyle = "#000000";
