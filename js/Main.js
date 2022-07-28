@@ -91,7 +91,7 @@ export class Main {
     //カメラの作成(画角、アスペクト比、カメラからの距離、カメラから奥までの距離)
     this.camera = new THREE.PerspectiveCamera(
       77,
-      3 / 4,
+      480 / 640,
       0.1,
       100
     );

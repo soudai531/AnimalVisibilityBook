@@ -23,10 +23,6 @@
     <div id="shader_select_menu">
       <div v-for="item in shaderTypes">
         <button v-on:click="onChangeShaderCheckbox(item)">{{item.name}}</button>
-        <label>
-          <input type="checkbox" v-bind:selected="item.value === true" v-on:change="onChangeShaderCheckbox(item)">
-          {{item.name}}
-        </label>
       </div>
     </div>
   </div>
