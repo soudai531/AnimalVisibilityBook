@@ -3,167 +3,155 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta charset="UTF-8">
-    <div class="kuuhaku1"></div>
-    <meta name="description" content="Bookblock: A Content Flip Plugin - Demo 1" />
     <meta name="keywords" content="javascript, jquery, plugin, css3, flip, page, 3d, booklet, book, perspective" />
     <meta name="author" content="Codrops" />
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
     <link rel="stylesheet" href="css/modal.css" />
-    <!-- custom demo style -->
     <link rel="stylesheet" type="text/css" href="css/explanation.css" />
     <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
-    <a href="./index.html">
-        <h2>どうぶつの見え方<br>図鑑</h2>
-    </a>
-    <div class="enclosure">
-        <div class="content">
-            <div class="top-main">
-                <button type="button">
-                    <div class="camera-dog pcview"><img src="./img/dog_icon.png" width="35px" height="35px"></div>イヌ
-                </button>
-                <div class="kuuhaku spview"></div>
-                <button type="button">
-                    <div class="camera-cat pcview"><img src="./img/cat_icon.png" width="35px" height="35px"></div>ネコ
-                </button>
-                <div class="kuuhaku spview"></div>
-                <button type="button">
-                    <div class="camera-monky pcview"><img src="./img/monkey_icon.png" width="40px" height="40px"></div>
-                    サル
-                </button>
+    <div class="title-container">
+        <a class="top-link" href="./index.html">
+            <h1 class="title">どうぶつの見え方<br>図鑑</h1>
+        </a>
+    </div>
+    <div class="top-button-container">
+        <button type="button" class="page-button">
+            <img src="./img/dog_icon.png" class="dog-icon animal-icon">
+            <span class="dog-page-text page-text">イヌ</span>
+        </button>
+        <button type="button" class="page-button">
+            <img src="./img/cat_icon.png" class="cat-icon animal-icon">
+            <span class="cat-page-text page-text">ネコ</span>
+        </button>
+        <button type="button" class="page-button">
+            <img src="./img/monkey_icon.png" class="monky-icon animal-icon">
+            <span class="monkey-page-text page-text">サル</span>
+        </button>
+    </div>
+    <div class="bb-custom-wrapper">
+        <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item">
+                <img class="explanation-img" src="img/explanation/1.png" alt="image01" />
+            </div>
+            <div class="bb-item">
+                <img class="explanation-img" src="img/explanation/2.png" alt="image02" />
+            </div>
+            <div class="bb-item">
+                <img class="explanation-img" src="img/explanation/3.png" alt="image03" />
             </div>
         </div>
-        <div class="container">
-            <div class="main clearfix">
-                <div class="bb-custom-wrapper">
-                    <div id="bb-bookblock" class="bb-bookblock">
-                        <div class="bb-item">
-                            <img class="explanation-img" src="img/explanation/1.png" alt="image01" /></a>
-                        </div>
-                        <div class="bb-item">
-                            <img class="explanation-img" src="img/explanation/2.png" alt="image02" /></a>
-                        </div>
-                        <div class="bb-item">
-                            <img class="explanation-img" src="img/explanation/3.png" alt="image03" /></a>
-                        </div>
-                    </div>
-                    <nav>
-                        <a id="bb-nav-prev" href="#" class="bb-custom-icon turn-left-button"><img
-                                src="img/left-arrow.png">
-                            <span class="page-text">まえのページへ</span></a>
-                        <div class="main1 pcview">
-                            <button type=" button" style="background-color: #01ACA6" id="openModal">
-                                <div class="camera1"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
-                                <div class="camera2">スマホでみてみる</div>
-                            </button>
-                        </div>
-                        <div class="main3 spview">
-                            <button type="button" style="width:180; background-color: #01ACA6">
-                                <div class="camera3"><img src="./img/camera_icon.png" width="30px" height="30px"></div>
-                                <span class="camera4">カメラで見てみる</span>
-                            </button>
-                        </div>
-                        <a id="bb-nav-next" href="#" class="bb-custom-icon turn-right-button"><span
-                                class="page-text">つぎのページへ</span>
-                            <img src="img/right-arrow.png"></a>
-                    </nav>
+        <nav>
+            <a id="bb-nav-prev" href="#" class="turn-left-button">
+                <img src="img/left-arrow.png" class="turn-left-icon">
+                <span class="before-page-text">まえのページへ</span>
+            </a>
+            <button type="button" id="openModal" class="camera-pc-button">
+                <img src="./img/camera_icon.png" class="camera-icon">
+                <span class="camera-pc-text">スマホで見え方を<ruby>再現<rt>さいげん</rt></ruby></span>
+            </button>
+            <a href="./animal-camera.html" class="camera-phone-button">
+                <img src="./img/camera_icon.png" class="camera-icon">
+                <span class="camera-phone-text">カメラで見え方を<ruby>再現<rt>さいげん</rt></ruby></span>
+            </a>
+            <a id="bb-nav-next" href="#" class="turn-right-button">
+                <span class="next-page-text">つぎのページへ</span>
+                <img src="img/right-arrow.png" class="turn-right-icon"></a>
+        </nav>
+    </div>
+    <!-- モーダルエリアここから -->
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <h1>QRコード</h1>
+                <img src="./img/animal-camera-qr.png">
+                <p>動物の見えかたをスマホのカメラでみれるよ！</p>
+                <p>QRコードをよみこんでね</p>
+                <div id="closeModal" class="closeModal">
+                    <span class="close-text">閉じる</span>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- モーダルエリアここまで -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+        var Page = (function () {
 
-        </div><!-- /container -->
-        <!-- モーダルエリアここから -->
-        <section id="modalArea" class="modalArea">
-            <div id="modalBg" class="modalBg"></div>
-            <div class="modalWrapper">
-                <div class="modalContents">
-                    <h1>QRコード</h1>
-                    <img src="./img/animal-camera-qr.png">
-                    <p>動物の見えかたをスマホのカメラでみれるよ！</p>
-                    <p>QRコードをよみこんでね</p>
-                    <div id="closeModal" class="closeModal">
-                        <span class="close-text">閉じる</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- モーダルエリアここまで -->エリアここまで -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/jquerypp.custom.js"></script>
-        <script src="js/jquery.bookblock.js"></script>
-        <script src="js/modal.js"></script>
-        <script>
-            var Page = (function () {
-
-                var config = {
-                    $bookBlock: $('#bb-bookblock'),
-                    $navNext: $('#bb-nav-next'),
-                    $navPrev: $('#bb-nav-prev'),
+            var config = {
+                $bookBlock: $('#bb-bookblock'),
+                $navNext: $('#bb-nav-next'),
+                $navPrev: $('#bb-nav-prev'),
+            },
+                init = function () {
+                    config.$bookBlock.bookblock({
+                        speed: 1200,
+                        shadowSides: 0.8,
+                        shadowFlip: 0.7
+                    });
+                    initEvents();
                 },
-                    init = function () {
-                        config.$bookBlock.bookblock({
-                            speed: 1200,
-                            shadowSides: 0.8,
-                            shadowFlip: 0.7
-                        });
-                        initEvents();
-                    },
-                    initEvents = function () {
+                initEvents = function () {
 
-                        var $slides = config.$bookBlock.children();
+                    var $slides = config.$bookBlock.children();
 
-                        // add navigation events
-                        config.$navNext.on('click touchstart', function () {
+                    // add navigation events
+                    config.$navNext.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('next');
+                        return false;
+                    });
+
+                    config.$navPrev.on('click touchstart', function () {
+                        config.$bookBlock.bookblock('prev');
+                        return false;
+                    });
+
+                    // add swipe events
+                    $slides.on({
+                        'swipeleft': function (event) {
                             config.$bookBlock.bookblock('next');
                             return false;
-                        });
-
-                        config.$navPrev.on('click touchstart', function () {
+                        },
+                        'swiperight': function (event) {
                             config.$bookBlock.bookblock('prev');
                             return false;
-                        });
+                        }
+                    });
 
-                        // add swipe events
-                        $slides.on({
-                            'swipeleft': function (event) {
-                                config.$bookBlock.bookblock('next');
-                                return false;
-                            },
-                            'swiperight': function (event) {
+                    // add keyboard events
+                    $(document).keydown(function (e) {
+                        var keyCode = e.keyCode || e.which,
+                            arrow = {
+                                left: 37,
+                                up: 38,
+                                right: 39,
+                                down: 40
+                            };
+
+                        switch (keyCode) {
+                            case arrow.left:
                                 config.$bookBlock.bookblock('prev');
-                                return false;
-                            }
-                        });
+                                break;
+                            case arrow.right:
+                                config.$bookBlock.bookblock('next');
+                                break;
+                        }
+                    });
+                };
 
-                        // add keyboard events
-                        $(document).keydown(function (e) {
-                            var keyCode = e.keyCode || e.which,
-                                arrow = {
-                                    left: 37,
-                                    up: 38,
-                                    right: 39,
-                                    down: 40
-                                };
+            return { init: init };
 
-                            switch (keyCode) {
-                                case arrow.left:
-                                    config.$bookBlock.bookblock('prev');
-                                    break;
-                                case arrow.right:
-                                    config.$bookBlock.bookblock('next');
-                                    break;
-                            }
-                        });
-                    };
-
-                return { init: init };
-
-            })();
-        </script>
-        <script>
-            Page.init();
-        </script>
+        })();
+    </script>
+    <script>
+        Page.init();
+    </script>
 </body>
 </head>

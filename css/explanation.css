@@ -1,79 +1,46 @@
-@media screen and(max-width: 480px) {
-  img {
-    border: 0;
-  }
-}
+@charset "utf-8";
 
-@media screen and(min-width: 1280px) {
-  img {
-    border: 1px solid red;
-  }
-}
-
+/* フォントの定義 */
 @font-face {
-
-  font-family: 'MyFont';
-
-  src: url(../Dog/css/fonts/riipopkr/RiiPopkkR.otf);
-
+  font-family: MyFont;
+  src: url(../css/fonts/riipopkr/RiiPopkkR.otf);
 }
 
 /*背景*/
 body {
   background-image: url("../img/Back-ground-image.png");
   background-size: cover;
-  background-position: center center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: 50px;
-  margin-right: 50px;
+  overflow: hidden;
+  font-family: MyFont;
 }
 
-/*どうぶつの見え方*/
-.kuuhaku1 {
-  margin-bottom: 30px;
+/* サイトタイトル */
+div.title-container {
+  margin-top: 50px;
+  margin-left: 30px;
 }
 
-h2 {
+h1.title {
   display: table-cell;
   text-align: center;
-  font-family: 'MyFont';
 }
 
-.content {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-/*犬猫猿ちょうボタン*/
-.top-main {
+/*犬猫猿ボタン*/
+.top-button-container {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin: 1em 0;
-
-}
-
-/*説明部分*/
-.box {
+  max-width: 960px;
+  min-width: 250px;
+  margin: 0 auto;
   position: relative;
-  text-align: left;
-  vertical-align: top;
-  padding: 150px 50px;
-  margin: 2em 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  top: -50px;
+  padding: 0px 30px;
 }
 
-.kuuhaku {
-  margin-left: 10px;
-}
-
-button {
+button.page-button {
   width: 180px;
   height: 50px;
   background-color: #01AC64;
@@ -82,131 +49,43 @@ button {
   border: 0;
   white-space: nowrap;
   border-radius: 7px;
-  text-align: right;
+  text-align: center;
   padding-right: 5%;
 }
 
-.sample {
-  text-align: right;
-}
 
-.content1 {
-  margin-top: 100px;
-}
-
-.camera-dog {
-  position: absolute;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  top: 125px;
-}
-
-.camera-cat {
-  position: absolute;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  top: 125px;
-}
-
-.camera-monky {
-  position: absolute;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  top: 125px;
-}
-
-.main1 {
-  width: 15px;
-}
-
-.main2 {
-  display: flex;
-  justify-content: flex-end;
-  display: flex;
-  align-items: flex-end;
+.page-text {
   position: relative;
-  bottom: 50px;
+  top: -10px;
+  left: 20px;
 }
 
-.main3 {
-  text-align: center;
-  font-family: 'Zilla Slab Highlight';
-}
-
-.main4 {
-  display: flex;
-  justify-content: flex-end;
-  display: flex;
-  align-items: flex-end;
+.animal-icon {
+  width: 35px;
+  height: 35px;
   position: relative;
-  float: right;
-  left: 30px;
-  bottom: 50px;
+  top: 5px;
+  left: 10px;
 }
 
-.camera1 {
-  position: absolute;
+.monkey-icon {
+  position: relative;
+  top: 11px;
 }
 
-.camera2 {
-  font-size: 15px;
-}
-
-.camera3 {
-  position: absolute;
-}
-
-.camera4 {
-  font-size: 18px;
-  text-align: center;
-}
-
-.spview {
-  display: none;
-}
-
-@media screen and (max-width: 979px) {
-
-  .pcview,
-  .page-text {
-    display: none;
-  }
-
-  /* 余白を表示しない */
-  .spview {
-    display: block;
-  }
-}
-
-/* めくり機能追加 */
-
-@font-face {
-  font-family: 'arrows';
-  src: url('../fonts/arrows/arrows.eot');
-  src: url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/arrows/arrows.woff') format('woff'),
-    url('../fonts/arrows/arrows.ttf') format('truetype'),
-    url('../fonts/arrows/arrows.svg#arrows') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* 説明画像 */
 .bb-custom-wrapper {
-  width: 900px;
-  height: 550px;
+  width: 1100px;
+  height: 650px;
+  margin: auto;
 }
 
 .bb-custom-wrapper .bb-bookblock {
   box-shadow: 0 12px 20px -10px rgba(81, 49, 49, 0.6);
 }
 
-.bb-custom-wrapper h3 {
-  font-size: 1.4em;
-  font-weight: 300;
-  margin: 0.4em 0 1em;
-}
 
-/* めくりボタンCSS */
+/* めくりボタン */
 .bb-custom-wrapper nav {
   width: 1em;
   height: 30px;
@@ -217,43 +96,130 @@ button {
 }
 
 .bb-custom-wrapper nav a {
-  display: inline-block;
-  width: fit-content;
-  height: 50px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  border-radius: 2px;
   background: #72b890;
   color: #fff;
   font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.bb-custom-wrapper nav a:hover {
-  opacity: 0.6;
+/* ボタンを光らせる */
+.bb-custom-wrapper nav a::before {
+  display: none;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  opacity: 0.3;
 }
 
-.bb-custom-icon:before {
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  font-size: 15px;
-  -webkit-font-smoothing: antialiased;
+/* マウスホバー時に表示 */
+.bb-custom-wrapper nav a:hover::before {
+  display: block;
 }
 
+/* 前のページ */
 .turn-right-button {
+  width: 270px;
+  height: 50px;
   position: fixed;
   bottom: 1em;
-  right: 2em;
+  right: 7em;
   text-align: center;
 }
 
+img.turn-right-icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 6px;
+}
+
+
+/* 次のページ */
 .turn-left-button {
+  width: 270px;
+  height: 50px;
   position: fixed;
   bottom: 1em;
-  left: 2em;
-  text-align: center;
+  left: 7em;
+}
+
+img.turn-left-icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 6px;
+}
+
+/* カメラで見るボタン（スマホ用） */
+a.camera-phone-button {
+  width: 350px;
+  height: 60px;
+  position: fixed;
+  bottom: 5em;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+a.camera-phone-button img.camera-icon {
+  position: relative;
+  top: 10px;
+}
+
+a.camera-phone-button span.camera-phone-text {
+  position: relative;
+  top: 8px;
+}
+
+/* QRコードモーダル表示ボタン（PC用） */
+button.camera-pc-button {
+  width: 350px;
+  height: 60px;
+  background-color: #72b890;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: Myfont;
+  font-size: 25px;
+  position: fixed;
+  bottom: 1em;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+/* ボタンを光らせる */
+button.camera-pc-button::before {
+  display: none;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  opacity: 0.3;
+}
+
+/* マウスホバー時に表示 */
+button.camera-pc-button:hover::before {
+  display: block;
+}
+
+
+a.camera-phone-button span.camera-phone-text {
+  position: relative;
+  top: 8px;
+}
+
+img.camera-icon {
+  width: 30px;
+  height: 30px;
 }
 
 /* No JS */
@@ -267,17 +233,30 @@ button {
 
 /* 説明画像 */
 .explanation-img {
-  width: 900px;
-  height: 550px;
+  width: 1100px;
+  height: 650px;
   display: flex;
 }
 
-.enclosure {
-  margin: auto;
-  padding: 0;
+@media screen and (min-width: 959px) {
+  .camera-phone-button {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 979px) {
+/* レスポンシブ */
+@media screen and (max-width: 959px) {
+
+  /* 959px以下に適用されるCSS（タブレット用） */
+  .animal-img,
+  .page-text,
+  .camera-button-pc {
+    display: none;
+  }
+
+  .bb-custom-wrapper {
+    margin: auto;
+  }
 
   .explanation-img,
   .bb-bookblock,
@@ -285,4 +264,91 @@ button {
     width: 350px;
     height: 250px;
   }
+}
+
+@media screen and (max-width: 480px) {
+
+  /* 480px以下に適用されるCSS（スマホ用） */
+
+  /* 非表示 */
+  .animal-img,
+  .page-text,
+  .before-page-text,
+  .next-page-text,
+  .camera-pc-button {
+    display: none;
+  }
+
+  /* サイトタイトル */
+  div.title-container {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  h1.title {
+    font-size: 20px;
+  }
+
+  div.top-button-container {
+    top: 20px;
+  }
+
+  div.top-button-container button {
+    width: 70px;
+    height: 50px;
+  }
+
+  img.animal-icon {
+    left: -3px;
+  }
+
+  .bb-custom-wrapper {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .explanation-img,
+  .bb-bookblock,
+  .bb-item {
+    width: 350px;
+    height: 250px;
+  }
+
+  /* ページめくりボタン */
+  a.turn-right-button,
+  a.turn-left-button {
+    width: 70px;
+    height: 50px;
+    position: fixed;
+    bottom: 3em;
+  }
+
+  a.turn-right-button {
+    right: 10px;
+  }
+
+  a.turn-left-button {
+    left: 10px;
+  }
+
+  /* カメラ画面ボタン */
+  a.camera-phone-button {
+    width: 300px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  a.camera-phone-button span.camera-phone-text {
+    font-size: 20px;
+  }
+
 }

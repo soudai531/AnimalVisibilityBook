@@ -1,9 +1,12 @@
 .bb-bookblock {
 	/*めくり時の写真設定*/
-	width: 900px;
-	height: 550px;
+	/* width: 900px;
+	height: 550px; */
+	width: 1100px;
+	height: 650px;
 	margin: 0 auto;
 	position: relative;
+	top: -20px;
 	z-index: 100;
 	-webkit-perspective: 1300px;
 	perspective: 1300px;
@@ -162,8 +165,8 @@
 }
 
 .bb-item {
-	width: 900px;
-	height: 550px;
+	width: 1100px;
+	height: 650px;
 	position: absolute;
 	top: 0;
 	left: 0;
