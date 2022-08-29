@@ -39,11 +39,7 @@ html {
 	clear: both;
 }
 
-body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #777;
-	background: white;
-}
+body {}
 
 a {
 	color: #555;

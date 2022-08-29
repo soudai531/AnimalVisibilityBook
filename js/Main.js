@@ -1,7 +1,5 @@
 import { MonkeyShader } from "./shader/MonkeyShader.js";
 import { DogShader } from "./shader/DogShader.js";
-import { MonochromeShader } from "./shader/MonochromeShader.js";
-import { NegativePositiveShader } from "./shader/NegativePositiveShader.js";
 import { TestObjects } from "./TestObjects.js";
 
 //  HTML読み込みと解析が完了したとき
@@ -28,7 +26,6 @@ export class Main {
       el: "#myapp",
       data: {
         shaderTypes: [
-          { name: "ヒト", id: "human", value: false },
           { name: "サル", id: "monkey", value: false },
           { name: "イヌ", id: "dog", value: false },
           { name: "ネコ", id: "cat", value: false }
@@ -90,10 +87,10 @@ export class Main {
     this.scene = new THREE.Scene();
     //カメラの作成(画角、アスペクト比、カメラからの距離、カメラから奥までの距離)
     this.camera = new THREE.PerspectiveCamera(
-      77,
-      480 / 640,
+      100,
+      640 / 480,
       0.1,
-      100
+      1000
     );
     //レンダラーを作成
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -112,7 +109,7 @@ export class Main {
     this.composer.addPass(new THREE.RenderPass(this.scene, this.camera));
     this.addShaders();
     this.normalRenderMode = true;
-    this.camera.position.z = 3;
+    this.camera.position.z = 2.2;
 
     this.render();
   }
@@ -130,10 +127,8 @@ export class Main {
   }
 
   addShaders() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    this.addEffect("monochrome", new MonochromeShader());
-    this.addEffect("nega", new NegativePositiveShader());
+    const width = 480;
+    const height = 640;
     this.addEffect("monkey", new MonkeyShader());
     this.addEffect("dog", new DogShader());
   }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8" />
-  <title>animal-camera</title>
-  <meta name="description" content="動物の見え方をカメラを使って体験で来ます。" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>動物の見え方カメラ</title>
+  <meta name="description" content="動物の見え方をカメラを使って体験できます。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google" content="notranslate" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
   <script defer src="libs/shaders/CopyShader.js"></script>
@@ -22,22 +22,15 @@
   <div id="myapp">
     <div id="shader_select_menu">
       <div v-for="item in shaderTypes">
-        <button v-on:click="onChangeShaderCheckbox(item)">{{item.name}}</button>
+        <input type="checkbox" v-on:click="onChangeShaderCheckbox(item)">
+        {{item.name}}
       </div>
     </div>
   </div>
-  <div id="canvas-wrapper"></div>
+  <div id="canvas-wrapper">
+  </div>
   <div id="video-wrapper">
     <video id="video" width="0" height="0" autoplay playsinline></video>
   </div>
-
-  <input type="button" onclick="videoSize()" />
-</body>
-<script>
-  function videoSize() {
-    const video = document.getElementById("video")
-    alert("ビデオ：横幅：" + video.videoWidth + "縦幅" + video.videoHeight);
-  }
-</script>
 
 </html>
