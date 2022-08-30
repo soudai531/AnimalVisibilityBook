@@ -11,18 +11,17 @@ body {
   height: fit-content;
 }
 
+#canvas-wrapper {
+  margin-top: 30px;
+}
+
 canvas {
   height: 640px;
   width: 480px;
-  margin: 40px auto 0px;
 }
 
 span {
   color: black;
-}
-
-#canvas-wrapper {
-  /* margin-top: 150px; */
 }
 
 #myapp {
