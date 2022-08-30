@@ -19,18 +19,20 @@
 </head>
 
 <body>
-  <div id="myapp">
-    <div id="shader_select_menu">
-      <div v-for="item in shaderTypes">
-        <input type="checkbox" v-on:click="onChangeShaderCheckbox(item)">
-        {{item.name}}
-      </div>
-    </div>
-  </div>
+
   <div id="canvas-wrapper">
   </div>
   <div id="video-wrapper">
     <video id="video" width="0" height="0" autoplay playsinline></video>
+  </div>
+  <div id="myapp">
+    <div id="shader_select_menu">
+      <div v-for="item in shaderTypes" class="shader-item">
+        <label>
+          <input type="checkbox" v-on:click="onChangeShaderCheckbox(item)">
+          <span class="shader-text">{{item.name}}</span></label>
+      </div>
+    </div>
   </div>
 
 </html>

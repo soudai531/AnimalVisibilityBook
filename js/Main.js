@@ -26,9 +26,10 @@ export class Main {
       el: "#myapp",
       data: {
         shaderTypes: [
-          { name: "サル", id: "monkey", value: false },
+
           { name: "イヌ", id: "dog", value: false },
-          { name: "ネコ", id: "cat", value: false }
+          { name: "ネコ", id: "cat", value: false },
+          { name: "サル", id: "monkey", value: false }
         ],
         picked: "video"
       },
@@ -36,9 +37,10 @@ export class Main {
         //チェックボックスリスナー
         onChangeShaderCheckbox: item => {
           item.value = !item.value;
-          if (item.id == "dog" || item.id == "cat") {
+          if ((item.id == "dog" && item.value == true) || (item.id == "cat" && item.value == true)) {
             alert("現在開発中です。");
           }
+
           if (item.id == "monkey") {
             this.changeShader(item.id, item.value);
           }
@@ -129,8 +131,9 @@ export class Main {
   addShaders() {
     const width = 480;
     const height = 640;
-    this.addEffect("monkey", new MonkeyShader());
     this.addEffect("dog", new DogShader());
+    this.addEffect("monkey", new MonkeyShader());
+
   }
 
   addEffect(name, shader) {
